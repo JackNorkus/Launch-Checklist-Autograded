@@ -41,8 +41,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     //validating no fields are blank
 
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-        return;
-        //alert("Please enter a value for each field.");
+        alert("Please enter a value for each field.");
     }
 
     //validating names are not numbers, and fuel and cargo levels are numbers
@@ -50,12 +49,11 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number") {
         console.log(pilot);
         console.log(copilot);
-        //alert("Pilot names cannot be numbers.");
+        alert("Pilot names cannot be numbers.");
     }
 
     if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
-        return;
-        //alert("Fuel and cargo levels must be valid numbers.");
+        alert("Fuel and cargo levels must be valid numbers.");
     }
 
     //updating shuttle requirements
